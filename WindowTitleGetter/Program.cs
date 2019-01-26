@@ -6,7 +6,7 @@ using System.IO;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
-using System.Runtime.InteropServices;
+
 
 namespace WindowTitleGetter
 {
@@ -15,7 +15,7 @@ namespace WindowTitleGetter
         //Windowtitel取得用
         [DllImport("user32.dll")]
         public static extern IntPtr GetForegroundWindow();
-
+        
         [DllImport("user32.dll", EntryPoint = "GetWindowText", CharSet = CharSet.Auto)]
         public static extern int GetWindowText(IntPtr hWnd, StringBuilder lpString, int nMaxCount);
 
